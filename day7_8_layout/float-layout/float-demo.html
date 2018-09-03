@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>float破坏性</title>
+    <style type="text/css">
+        .div1{
+            width: 100%;
+            background-color: #dedede;
+            padding: 10px;
+            margin: 10px;
+
+
+        }
+        .div2{
+            width:300px;
+            background-color: yellow;
+            height: 300px;
+            float: left;
+        }
+        .div3{
+            width: 300px;
+            background-color: blue;
+            height: 300px;
+            float:left;
+            margin-left: 50px;
+        }
+        .clear{
+            clear: both;
+        }
+
+    </style>
+</head>
+<body>
+<div class="div1">
+    <div class="div2"></div>
+    <div class="div3">
+        <p>dddddddddddddddddddddddddddddddddddddddddddd</p>
+    </div>
+    <div class="clear"></div>
+</div>
+</body>
+</html>
