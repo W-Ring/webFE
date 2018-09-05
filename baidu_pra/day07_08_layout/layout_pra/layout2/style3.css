@@ -1,0 +1,37 @@
+/*flot+margin,有对文字（行内元素）的水平居中和垂直居中*/
+.wrapper{
+    background: #767175;
+    height: 600px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden;
+
+}
+
+.left_side{
+    width: 300px;
+    float: left;
+    height: 100%;
+    background: #65a5fa;
+    text-align: center;
+     vertical-align: middle;  //父元素高度不确定，可以通过position定位
+
+
+}
+.right_side {
+    margin-left: 320px;
+    width: calc(100% - 320px);
+    height: 500px;
+    background: chocolate;
+    text-align: center;
+    /*垂直居中，父元素是盒模型，高度确定，把行高设置为line-height*/
+    /*且子元素是行内元素*/
+    line-height: 500px;
+}
+
+
+.left_content{
+    position: relative;
+    top:300px;
+}

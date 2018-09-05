@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>三列布局：左右固定，中间自适应（普通）</title>
+    <style type="text/css">
+        <!--使用float+margin,但是要先加载左右两侧的内容元素，这是缺陷-->
+        .wrapper{
+            background: #767175;
+            height: 600px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .left_side{
+            width: 200px;
+            float:left;
+            height: 100%;
+            background: #65a5fa;
+        }
+        .right_side{
+            float:right;
+            width: 200px;
+            height:500px;
+            background: chocolate;
+        }
+        .middle{
+            width:calc(100%- 400px);
+            margin: 0 200px;
+            background: blue;
+            height:100%;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="left_side"><span class="left_content">left</span></div>
+    <div class="right_side">right</div>
+    <div class="middle">middle</div>
+
+</div>
+</body>
+</html>

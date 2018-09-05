@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css" >
+        *{
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        /*header*/
+        header{
+            width: 100%;
+            height:100px;
+            background: #333333;
+            color:white;
+        }
+        .headerContent{
+            width:960px;
+            overflow: hidden;
+            margin:0 auto;
+        }
+        .headerContent h1{
+            float: left;
+        }
+        .headerContent ul{
+            float:right;
+        }
+        header ul li{
+           list-style-type: none;
+            display: inline;
+        }
+      /*banner*/
+      .banner{
+          width:100%;
+          height:400px;
+          background: #66bb33 ;
+          padding: 10px;
+          box-sizing: border-box;
+      }
+
+      .bannerContent{
+
+
+          margin-top: 350px;
+          margin-left: 960px;
+
+      }
+      .bannerContent ul li{
+          list-style-type: none;
+          display: inline;
+          border: #333333 solid 1px;
+          padding:5px;
+          margin-left: 3px;
+          background: #eeeeee;
+      }
+      #li2{
+          padding-top: 20px;
+      }
+
+
+
+      /*navBar*/
+      .navBar{
+
+          height: 100px;
+          border-bottom: #767175 solid 1px;
+          margin:0 ;
+
+      }
+
+      .navBar ul{
+          position:relative;
+          top:50px;
+          list-style-type: none;
+          width: 960px;
+          margin: 0 auto;
+      }
+      .navBar ul li{
+          float: left;
+          height: 50px;   /*需要计算*/
+          margin: 0;
+          background: #767175;
+          line-height: 50px;
+          padding:0 20px;
+          text-align: center;
+          border: #333333 solid 1px;
+          border-top-left-radius: 16px;
+          border-top-right-radius: 16px;
+
+      }
+
+        /*content*/
+        .content{
+            width:960px;
+            height: 100%;
+            margin: 0 auto;
+        }
+
+        .row{
+            display: flex;
+        }
+        .row div{
+            margin:5px;
+            padding:80px;
+            border: #333333 solid 1px;
+            flex:1;
+        }
+
+
+        /*footer*/
+        footer{
+            width:100%;
+            height: 100px;
+            background: #333333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+<header>
+    <div class="headerContent">
+        <h1>Logo</h1>
+        <ul>
+            <li><a>Github</a></li>
+            <li><a>Register</a></li>
+            <li><a>Login</a></li>
+        </ul>
+    </div>
+</header>
+<div class="banner">
+   <div class="bannerContent">
+       <ul>
+           <li>1</li>
+           <li id="li2">2</li>
+           <li>3</li>
+           <li>4</li>
+       </ul>
+   </div>
+</div>
+
+
+
+<div class="navBar">
+
+       <ul>
+           <li>HOME</li>
+           <li>PROFILE</li>
+           <li>ABOUT</li>
+       </ul>
+
+</div>
+<div class="content">
+    <div class="row">
+        <div>content1</div>
+        <div>content2</div>
+        <div>content3</div>
+    </div>
+    <div class="row">
+        <div>content4</div>
+        <div>content5</div>
+        <div>content6</div>
+        <div>content7</div>
+    </div>
+
+    <div class="row">
+        <div>content8</div>
+        <div>content9</div>
+        <div>content10</div>
+    </div>
+</div>
+<footer>@2018 ife baidu</footer>
+</body>
+</html>

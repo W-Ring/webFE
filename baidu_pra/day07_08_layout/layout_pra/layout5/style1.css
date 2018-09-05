@@ -1,0 +1,9 @@
+.wrapper{height: 100%; background: #65a5fa;overflow: hidden;}
+.left_side, .middle{height:600px;width:200px;}
+.left_side{background-color: blue}
+.middle{background-color: yellow}
+.right_side {width:calc(100%- 400px); background-color: red}
+/*float*/
+.left_side{float: left;}
+.middle{float: left;}
+.right_side{float: right;}

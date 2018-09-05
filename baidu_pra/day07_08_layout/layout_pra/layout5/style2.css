@@ -1,0 +1,5 @@
+.wrapper{height: 100%; background: #65a5fa;box-sizing: border-box;}
+.left_side{height:600px;width:200px;background-color: blue;position: absolute;}
+.middle{height:600px;width:200px;background-color: yellow;position:absolute; left:200px;}
+/*position*/
+.right_side{ width:calc(100% - 400px);height:600px;background: #a60000;position:absolute;left:400px;}

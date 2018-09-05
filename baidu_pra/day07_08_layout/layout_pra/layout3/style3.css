@@ -1,0 +1,38 @@
+/*flot+margin,有对文字（行内元素）的水平居中和垂直居中*/
+/*应用此样式，要把文档流中的左右两个div换位置，形成正确的文档流*/
+.wrapper{
+    background: #767175;
+    height: 600px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden;
+
+}
+
+.left_side{
+    width: calc(100% - 320px);
+    margin-right: 320px;
+    height: 100%;
+    background: #65a5fa;
+    text-align: center;
+     vertical-align: middle;  //父元素高度不确定，可以通过position定位
+
+
+}
+.right_side {
+    float: right;
+    width: 300px;
+    height: 500px;
+    background: red;
+    text-align: center;
+    /*垂直居中，父元素是盒模型，高度确定，把行高设置为line-height*/
+    /*且子元素是行内元素*/
+    line-height: 500px;
+}
+
+
+.left_content{
+    position: relative;
+    top:300px;
+}
