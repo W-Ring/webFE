@@ -30,7 +30,7 @@
                             <li class="barli"><a href="#tab-list">About</a></li>
                             <li class="barli"><a href="#teamCrew">Team</a></li>
                             <li class="barli"><a href="#portfolio">Portfolio</a> </li>
-                            <li class="barli"><a href="#section4" >Media</a></li>
+                            <li class="barli"><a href="#media" >Media</a></li>
                             <li class="barli"><a href="#footer">Contact</a></li>
 
                         </ul>
@@ -352,27 +352,117 @@
     </section>
 
 
-<hr class="divider">
+
     <!--Media-->
-    <section id="section4">
-        <div class="items">
-            <div class="item item1">
-                <img src="image/media1.jpg" alt="">
-                <div class="intro">
-                    <h3>Learn How to Improve Your Personal Business </h3>
-                    <p>Li Jun, a China Academy of Engineering academician and also director of the alliance's experts' committee,
-                        said that China will also launch design guidance for smart cars, smart map architecture and standards for
-                        test grounds.</p>
-                </div>
-            </div>
-            <div class="item item2">
-                <div class="intro">
-                    <h3>Choose Between Two Beautifully Designed Color Schemes.</h3>
-                    <p>China will come up with its own smart car standards, traffic rules, laws and regulations relating to safety,
-                        according to the China Industry Innovation Alliance for the Intelligent and Connected Vehicles.</p>
-                </div>
-                <img src="image/media2.jpg" alt="">
-            </div>
+    <section id="media">
+        <div class="container">
+           <div class="mediaWrapper">
+               <h1 id="mediaTitle">Media</h1>
+               <div class="row">
+                   <div class="col-md-6">
+                       <h2 class="secondTitle">In the news</h2>
+                       <div >
+                           <div class="MediaNewsContent">
+                               <img src="image/icon/coin1.jpg">
+                               <div class="nesDescription">
+                                   <p class="p1">Media Protocol: A Safe Home For Content Creators, Publishers and Consumers.</p>
+                                   <p class="p2">May 2,2018</p>
+                               </div>
+                           </div>
+
+                           <div class="MediaNewsContent">
+                               <img src="image/icon/coin2.jpg">
+                               <div class="nesDescription">
+                                   <p class="p1">Media Protocol: A Safe Home For Content Creators, Publishers and Consumers.</p>
+                                   <p class="p2">May 2,2018</p>
+                               </div>
+                           </div>
+                           <div class="MediaNewsContent">
+                               <img src="image/icon/coin3.jpg">
+                               <div class="nesDescription">
+                                   <p class="p1">Media Protocol: A Safe Home For Content Creators, Publishers and Consumers.</p>
+                                   <p class="p2">May 2,2018</p>
+                               </div>
+                           </div>
+                           <div class="MediaNewsContent">
+                               <img src="image/icon/coin4.jpg">
+                               <div class="nesDescription">
+                                   <p class="p1">Media Protocol: A Safe Home For Content Creators, Publishers and Consumers.</p>
+                                   <p class="p2">May 2,2018</p>
+                               </div>
+                           </div>
+
+
+
+                       </div>
+                       <button type="button" class="mediaButton">VIEW MORE</button>
+                   </div>
+                   <div class="col-md-6">
+                       <h2  class="secondTitle">Press Releases</h2>
+                       <div class="pressReleases">
+                           <p class="p1">Media Protocol: A Safe Home For Content Creators, Publishers and Consumers.Media Protocol: A Safe Home For Content Creators, Publishers and Consumers.</p>
+                           <p class="p2">May 2,2018</p>
+                       </div>
+                       <div  class="pressReleases">
+                           <p class="p1">Media Protocol: A Safe Home For Content Creators, Publishers and Consumers.Media Protocol: A Safe Home For Content Creators, Publishers and Consumers.</p>
+                           <p class="p2">May 2,2018</p>
+                       </div>
+                       <button type="button" class="mediaButton">VIEW MORE</button>
+                   </div>
+               </div>
+
+
+               <div class="conferences">
+                   <h2  class="secondTitle">Conferences</h2>
+                   <div class="row">
+                       <div class="col-md-6">
+                           <div class="conferencesItem">
+                               <div class="conferencesItemImg" >
+                                   <img src="image/media1.jpg">
+                                   <div class="afterDefine"></div>
+                               </div>
+                               <div class="conferencesDes">
+                                   <p class="p3">Token Summit</p>
+                                   <p class="p4">May 16-17,2018 in New York,USA</p>
+                               </div>
+                           </div>
+                           <div class="conferencesItem">
+                               <div class="conferencesItemImg">
+                                   <img src="image/media1.jpg">
+                                   <div class="afterDefine"></div>
+                               </div>
+                               <div class="conferencesDes">
+                                   <p class="p3">Token Summit</p>
+                                   <p class="p4">May 16-17,2018 in New York,USA</p>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="col-md-6">
+                           <div class="conferencesItem">
+                               <div class="conferencesItemImg">
+                                   <img src="image/media1.jpg">
+                                   <div class="afterDefine"></div>
+                               </div>
+                               <div class="conferencesDes">
+                                   <p class="p3">Token Summit</p>
+                                   <p class="p4">May 16-17,2018 in New York,USA</p>
+                               </div>
+                           </div>
+                           <div class="conferencesItem">
+                               <div class="conferencesItemImg">
+                                   <img src="image/media1.jpg">
+                                   <div class="afterDefine"></div>
+                               </div>
+                               <div class="conferencesDes">
+                                   <p class="p3">Token Summit</p>
+                                   <p class="p4">May 16-17,2018 in New York,USA</p>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   <button type="button" class="mediaButton">VIEW MORE</button>
+               </div>
+           </div>
         </div>
     </section>
     <!--footer-->
@@ -409,7 +499,23 @@
                 });
                 return false;
             });
+
+            $(".mediaButton").hover(function () {
+                $(this).css({"color":"white","background":"#1e3888"});
+            })
+
+            $(".mediaButton").mouseout(function () {
+                $(this).css({"color":"#1e3888","background":"white"});
+            })
+
+            $(".conferencesItemImg ").mouseover(function () {
+                $(".conferencesItemImg::after").show();
+
+            })
+
         });
+
+
     </script>
 
 
