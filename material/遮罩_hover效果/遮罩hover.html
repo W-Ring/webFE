@@ -12,6 +12,10 @@
         .method1{
             position: relative;
             display: inline-block;
+            cursor: pointer;
+            overflow: hidden;
+            /*transition经常和hover配合使用，触发事件*/
+            transition: all 1s;
         }
         /*after伪元素可以换成一个div，且可以把文字设置为白色，展示描述效果*/
         /*只添加伪元素可以达到遮罩效果，但是不能设置hover,可以把伪元素换成一个空的div*/
@@ -42,9 +46,14 @@
             display: none;
 
         }
-        
+        /*遮罩*/
         .method1:hover .after1{
             display: block;
+        }
+
+        /*放大效果*/
+        .method1:hover  img{
+            transform: scale(1.2);
         }
         .after1 h1{
             color:white;
