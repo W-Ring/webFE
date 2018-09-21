@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .method1 img{
+            width:500px;
+            height:300px;
+        }
+
+        .method1{
+            position: relative;
+            display: inline-block;
+        }
+        /*after伪元素可以换成一个div，且可以把文字设置为白色，展示描述效果*/
+        /*只添加伪元素可以达到遮罩效果，但是不能设置hover,可以把伪元素换成一个空的div*/
+        /*方法也适合给背景添加蒙版效果，header里有backgroud-image,可以使用header::after添加效果*/
+
+
+        /*.method1::after{*/
+            /*content: " ";*/
+            /*position: absolute;*/
+            /*display: block;*/
+            /*width: 100%;*/
+            /*height: 100%;*/
+            /*top: 0;*/
+            /*left: 0;*/
+            /*background-color:rgba(20,20,20,0.65);*/
+            /*display: none;*/
+        /*}*/
+
+
+        .after1{
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color:rgba(20,20,20,0.65);
+            display: none;
+
+        }
+        
+        .method1:hover .after1{
+            display: block;
+        }
+        .after1 h1{
+            color:white;
+        }
+    </style>
+</head>
+<body>
+<div class="method1">
+    <img src="media1.jpg">
+    <div class="after1">
+        <h1>Hello World</h1>
+    </div>
+</div>
+</body>
+</html>
