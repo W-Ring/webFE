@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件冒泡-事件捕捉-事件委托</title>
+    <style>
+        #parent{
+            padding:100px;
+            background: #FEDDAB;
+        }
+
+        #child{
+            margin: 10px;
+            padding:50px;
+            background: #8f0630;
+        }
+        #smallChild{
+            margin: 30px;
+            background: #3366cc;
+        }
+    </style>
+</head>
+<body>
+<!--事件冒泡和事件捕获-->
+<div id="parent">
+    parent
+    <div id="child">
+        child:click me
+        <div id="smallChild">
+            small child
+            <a href="http://www.baidu.com">baidu</a>
+        </div>
+    </div>
+</div>
+
+<!--事件委托-->
+<div>
+    <ul id="list">
+        <li>111</li>
+        <li>222</li>
+        <li>333</li>
+        <li>444</li>
+    </ul>
+</div>
+<script src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+    document.getElementById('parent').addEventListener('click',function (e) {
+        console.log('parent事件被触发，'+this.id);
+    } ,true);
+    document.getElementById('child').addEventListener('click',function (e) {
+        console.log('child事件被触发，'+this.id);
+    } ,true);
+    document.getElementById('smallChild').addEventListener('click',function (e) {
+        console.log('small child事件被触发，'+this.id);
+    } ,true);
+
+    //e.target表示事件冒泡中触发事件的源元素
+    document.getElementById('list').addEventListener('click',function (e) {
+        e.target.innerHTML='被点击';
+     console.log(e.target.nodeName)
+    });
+    // 阻止冒泡
+    $("#smallChild").click(function (event) {
+        event.stopPropagation();
+    });
+    // 阻止页面跳转
+    // $("#smallChild a").click(function (event) {
+    //     event.preventDefault();
+    // });
+    //阻止默认事件和事件冒泡,但不会阻止事件捕获
+    $("#smallChild a").click(function (event) {
+       return false;
+    })
+
+
+</script>
+
+
+</body>
+</html>
