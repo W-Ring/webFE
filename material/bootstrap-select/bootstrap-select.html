@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>videoShow</title>
+    <link rel="stylesheet" href="bootstrap-4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-select.min.css">
+    <style>
+        #select10{
+            background: red!important;
+            border: #0C0C0C solid 1px !important;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="layui-container ">
+        <p>1-单选</p>
+        <select class="selectpicker" data-width="600px" data-size="50">
+            <option value="1">广东省</option>
+            <option value="2">广西省</option>
+            <option value="3">福建省</option>
+            <option value="4">湖南省</option>
+            <option value="5">山东省</option>
+        </select>
+
+        <p>2-多选</p>
+        <select class="selectpicker" multiple>
+            <option value="1">广东省</option>
+            <option value="2">广西省</option>
+            <option value="3">福建省</option>
+            <option value="4">湖南省</option>
+            <option value="5">山东省</option>
+        </select>
+
+        <p>3-搜索</p>
+        <select class="selectpicker" multiple data-live-search="true">
+            <option value="">请选择</option>
+            <option value="1">广东省</option>
+            <option value="2">广西省</option>
+            <option value="3">福建省</option>
+            <option value="4">湖南省</option>
+            <option value="5">山东省</option>
+        </select>
+
+
+
+        <p>4-选项分组</p>
+        <select class="form-control selectpicker" data-live-search="true" multiple>
+            <optgroup label="广东省">
+                <option value="1">广州市</option>
+                <option value="2">深圳市</option>
+                <option value="3">珠海市</option>
+            </optgroup>
+            <optgroup label="广西">
+                <option value="1">南宁市</option>
+                <option value="2">柳州</option>
+                <option value="3">桂林市</option>
+            </optgroup>
+            <optgroup label="山东">
+                <option value="1">烟台</option>
+                <option value="2">青岛</option>
+                <option value="3">济南</option>
+            </optgroup>
+        </select>
+
+        <p>5-设置最多选中项为2个</p>
+        <select class="selectpicker" multiple data-live-search="true" data-max-options="2">
+            <option value="1">广东省</option>
+            <option value="2">广西省</option>
+            <option value="3">福建省</option>
+            <option value="4">湖南省</option>
+            <option value="5">山东省</option>
+        </select>
+
+        <p>6-缩略模式，比如当选中值大于3个的时候只显示选中项的个数，注意这个属性只对多选生效</p>
+        <select class="selectpicker" multiple data-live-search="true" data-selected-text-format="count > 3">
+            <option value="1">广东省</option>
+            <option value="2">广西省</option>
+            <option value="3">福建省</option>
+            <option value="4">湖南省</option>
+            <option value="5">山东省</option>
+        </select>
+
+        <p>7-显示带颜色标签</p>
+        <select class="form-control selectpicker" title="请选择省份" multiple>
+            <option data-content="<span class='label label-success'>广东省</span>">广东省</option>
+            <option data-content="<span class='label label-info'>广西省</span>">广西省</option>
+            <option data-content="<span class='label label-warning'>福建省</span>">福建省</option>
+            <option data-content="<span class='label label-danger'>山东省</span>">山东省</option>
+        </select>
+        <p>8</p>
+        <select class="selectpicker" multiple data-selected-text-format="count">
+            <option>Mustard</option>
+            <option>Ketchup</option>
+            <option>Relish</option>
+        </select>
+
+
+
+        <p>9</p>
+    <select class="selectpicker show-menu-arrow show-tick"  style="color: #0C0C0C" data-header="Select a condiment" id="ircamera" data-live-search="true"  data-max-options="3" title="请选择一个保护区" data-selected-text-format="count"  data-width="600px">
+        <option  data-token="guangdong" value="1"  title="广东省保护区"  class="special">广东省</option>
+        <option data-token="guangxi"  value="2" >广西省</option>
+        <option data-token="fujian"  value="3" title="132"  style="background: #5cb85c; color: #fff;">福建省</option>
+        <option data-token="hunan"  value="4" title="132" >湖南省</option>
+        <option data-token="shandong"  value="5" title="132" >山东省</option>
+        <option data-diver="true">gdfgfd</option>
+    </select>
+    </div>
+
+    <p>10</p>
+    <select class="selectpicker show-menu-arrow" id="select10">
+        <option>Mustard</option>
+        <option>Ketchup</option>
+        <option>Relish</option>
+    </select>
+
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="js/popper.js"></script>
+<script type="text/javascript" src="bootstrap-4.1.3/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-select.min.js"></script>
+</body>
+</html>
