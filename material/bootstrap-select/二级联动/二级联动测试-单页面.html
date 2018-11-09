@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="bootstrap-4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-select.min.css">
+</head>
+<body>
+<div class="selectArea">
+    <label for="area">所属地区</label><br>
+    <select class="selectpicker show-menu-arrow"   id="area"   title="请选择一个地区"  data-width="300px" >
+
+
+    </select>
+</div>
+<div class="selectArea">
+    <label for="ircamera">摄像探头</label><br>
+    <select class="selectpicker show-menu-arrow"   id="ircamera"   title="请选择一个监控探头" data-width="300px"  >
+
+
+    </select>
+</div>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="js/popper.js"></script>
+<script type="text/javascript" src="bootstrap-4.1.3/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-select.min.js"></script>
+
+<script>
+    $(function () {
+        /*生成JSON数据：键值对*/
+        var areaJson='{"梯子沟":["梯子沟-01","梯子沟-02","梯子沟-03","梯子沟-04","梯子沟-05","梯子沟-06","梯子沟-07","梯子沟-08","梯子沟-09","梯子沟-10"],"臭水":["臭水-01","臭水-02","臭水-03","臭水-04","臭水-05","臭水-06","臭水-07","臭水-08","臭水-09","臭水-10"]}';
+        /*解析JSON数据，转换成JS的对象形式，两种方法，一种是eval,另一种是JSON.parse(),后者需要在原始数据中加上引号*/
+        // var area_obj=eval(areaJson);
+        var area_obj=JSON.parse(areaJson);
+        console.log(area_obj);
+        /*key表示的就是梯子沟，臭水*/
+        for(var key in area_obj){
+            console.log(key);
+            /*append在元素内部添加DOM*/
+            $('#area').append("<option value="+key+">"+key+"</option>");
+        }
+        /*使用bootstrap-select插件要用的，否则新添加的option更新不了*/
+        $('#area').selectpicker('refresh');
+        // $('#area').selectpicker('render');
+        /*此插件的事件处理，.changed.bs.select*/
+        $('#area').on('changed.bs.select',function () {
+            var areaValue=$(this).val();
+            // $('#ircamera').html("<option value=''>请选择一个地区</option>");
+            /*在给第二个select添加新的option时，要把原来的去掉*/
+            // $('#ircamera').html(" ");
+            $('option',$('#ircamera')).remove();    //这一句和上一句等价
+            for(var k in area_obj[areaValue]){
+                var cameraNow=area_obj[areaValue][k];
+                console.log(cameraNow);
+                $('#ircamera').append("<option value="+cameraNow+">"+cameraNow+"</option>"); }
+            $('#ircamera').selectpicker('refresh');
+            // $('#ircamera').selectpicker('render');
+
+        })
+
+
+
+
+
+
+
+    });
+</script>
+</body>
+</html>
